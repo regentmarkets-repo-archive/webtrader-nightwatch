@@ -18,10 +18,11 @@ module.exports = {
   "output_folder": "./reports", // reports (test outcome) output by nightwatch
   "page_objects_path": './pages',
   "custom_commands_path": './commands',
-  "test_workers": true,
+  //"test_workers": true,
 
   "test_settings": {
     "default": {
+
       "selenium": { // downloaded by selenium-download module (see readme)
         "start_process": true, // tells nightwatch to start/stop the selenium process
         "server_path": "./node_modules/nightwatch/bin/selenium.jar",
@@ -31,18 +32,22 @@ module.exports = {
           "webdriver.chrome.driver": "./node_modules/nightwatch/bin/chromedriver"
         }
       },
+
       "filter": "tests/\*/\*.test.js",
+
       "screenshots": {
         "enabled": true, // if you want to keep screenshots
         "path": './reports/screenshots', // save screenshots here
         "on_failure": true
       },
+
       "globals": {
         "url": url,
         "auth_url": process.env.AUTHENTICATION_URL,
         "waitForConditionTimeout": 10000, // sometimes internet is slow so wait.
         "waitForConditionPollInterval": 500
       },
+
       "desiredCapabilities": { // use Chrome as the default browser for tests
         "browserName": "chrome",
         "acceptSslCerts": true,
@@ -53,6 +58,7 @@ module.exports = {
           ]
         }
       }
+
     },
   }
 }
