@@ -32,8 +32,9 @@ export default {
       .click('div[role="dialog"]:last-of-type .chartOptions_button.chart_type')
       .assert.cssClassNotPresent('div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]', 'bold')
       .execute('$(\'div[role="dialog"]:last-of-type .chartTypeOverlay [rv-class-bold="enableCrosshair"]\').parent().click()')
+
     /**
-     * To-Do:
+     * ToDo:
      *  - Figure out a way to simulate mouse hover over highcharts
      */
     /*

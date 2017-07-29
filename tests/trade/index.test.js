@@ -1,7 +1,7 @@
 /**
  * Tests for trade dialog
  */
-import { beforeLogin, after } from '../default';
+import { beforeLogin, after } from '../../others/default';
 import * as UpDownTests from './upDownTradeTest';
 import * as TouchNoTouchTests from './touchNoTouchTradeTest';
 import * as InOutTests from './inOutTradeTest';

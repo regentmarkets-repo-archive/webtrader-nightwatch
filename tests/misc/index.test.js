@@ -1,4 +1,4 @@
-import { beforeLogin, after } from '../default';
+import { beforeLogin, after } from '../../others/default';
 import { help as helpTest } from './helpTest.js';
 import { accountSwitch as accountSwitchTest } from './accountSwitchTest';
 import { languageChange as languageChangeTest } from './languageChangeTest';

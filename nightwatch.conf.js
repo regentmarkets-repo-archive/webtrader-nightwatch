@@ -18,6 +18,7 @@ module.exports = {
   "output_folder": "./reports", // reports (test outcome) output by nightwatch
   "page_objects_path": './pages',
   "custom_commands_path": './commands',
+  "test_workers": true,
 
   "test_settings": {
     "default": {

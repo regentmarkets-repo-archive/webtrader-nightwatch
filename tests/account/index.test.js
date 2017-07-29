@@ -1,4 +1,4 @@
-import { before, after } from '../default';
+import { before, after } from '../../others/default';
 import { login as loginTest } from './loginTest';
 import { portfolio as portfolioTest } from './portfolioTest';
 import { statement as statementTest } from './statementTest';

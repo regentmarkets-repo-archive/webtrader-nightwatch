@@ -1,4 +1,4 @@
-import { before, after } from '../default';
+import { before, after } from '../../others/default';
 import chartLineTest from './chartLinesTest';
 
 export default {
