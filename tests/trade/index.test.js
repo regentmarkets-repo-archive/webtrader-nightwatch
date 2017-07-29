@@ -2,13 +2,13 @@
  * Tests for trade dialog
  */
 import { beforeLogin, after } from '../../others/default';
-import * as UpDownTests from './upDownTradeTest';
-import * as TouchNoTouchTests from './touchNoTouchTradeTest';
-import * as InOutTests from './inOutTradeTest';
-import * as DigitTests from './digitTradeTest';
-import * as AsianTests from './asianTradeTest';
-import * as tickerTest from './tickerTest';
-import { tradeTemplate } from './tradeTemplateTest';
+import * as UpDownTests from './upDownTrade';
+import * as TouchNoTouchTests from './touchNoTouchTrade';
+import * as InOutTests from './inOutTrade';
+import * as DigitTests from './digitTrade';
+import * as AsianTests from './asianTrade';
+import * as tickerTest from './ticker';
+import { tradeTemplate } from './tradeTemplate';
 
 export default {
   before: (browser) => {

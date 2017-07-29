@@ -1,5 +1,5 @@
 import { before, after } from '../../others/default';
-import chartLineTest from './chartLinesTest';
+import chartLineTest from './chartLines';
 
 export default {
   before: (browser) => {

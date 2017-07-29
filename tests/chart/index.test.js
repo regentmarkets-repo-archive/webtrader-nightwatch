@@ -1,10 +1,10 @@
 import { before, after } from '../../others/default';
-import { chartTemplateTest } from './chartTemplateTest';
-import { chartFunctionTest } from './chartFunctionTest';
-import chartLineTest from './chartLinesTest';
-import indicatorTest from './indicatorTest';
-import overlayTest from './overlayTest';
-import { indicatorAndOverlay as indicatorAndOverlayTest } from './indicatorAndOverlayTest';
+import { chartTemplateTest } from './chartTemplate';
+import { chartFunctionTest } from './chart';
+import chartLineTest from './chartLines';
+import indicatorTest from './indicator';
+import overlayTest from './overlay';
+import { indicatorAndOverlay as indicatorAndOverlayTest } from './indicatorAndOverlay';
 
 export default {
   before: (browser) => {

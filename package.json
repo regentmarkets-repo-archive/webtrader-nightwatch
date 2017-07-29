@@ -35,7 +35,7 @@
   "scripts": {
     "postinstall": "node nightwatch.conf.js",
     "test": "nightwatch --config nightwatch.conf.js",
-    "test-and-generate-report": "yarn test && nightwatch-html-reporter -d ./reports -o index.html"
+    "test-report": "nightwatch-html-reporter -d ./reports -o index.html"
   },
   "contributors": [
     {

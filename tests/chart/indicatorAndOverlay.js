@@ -1,5 +1,5 @@
-import { closeDialog as closeIndicatorDialog ,addIndicator, removeIndicator } from './indicatorTest';
-import { openDialog, closeDialog, addOverlay } from './overlayTest';
+import { closeDialog as closeIndicatorDialog ,addIndicator, removeIndicator } from './indicator';
+import { openDialog, closeDialog, addOverlay } from './overlay';
 
 const ovrly1 = {
   count: '1',

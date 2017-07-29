@@ -1,7 +1,7 @@
 import { beforeLogin, after } from '../../others/default';
-import { help as helpTest } from './helpTest.js';
-import { accountSwitch as accountSwitchTest } from './accountSwitchTest';
-import { languageChange as languageChangeTest } from './languageChangeTest';
+import { help as helpTest } from './help.js';
+import { accountSwitch as accountSwitchTest } from './accountSwitch';
+import { languageChange as languageChangeTest } from './languageChange';
 
 export default {
   before: beforeLogin,

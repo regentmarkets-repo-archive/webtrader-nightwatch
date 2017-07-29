@@ -1,7 +1,7 @@
 import { before, after } from '../../others/default';
-import { assetIndex } from './assetIndexTest';
-import { tradingTimes } from './tradingTimesTest';
-import { viewHistoricalData } from './viewHistoricalDataTest';
+import { assetIndex } from './assetIndex';
+import { tradingTimes } from './tradingTimes';
+import { viewHistoricalData } from './viewHistoricalData';
 
 export default {
   before: before,
