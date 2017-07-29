@@ -1,12 +1,8 @@
 import { start, close as stop } from './../server';
 export default {
-  before: (browser) => {
-    if (browser.globals.env !== 'browserstack')
-      start();
-  },
+  before: (browser) => start(),
   after: (browser) => {
-    if (browser.globals.env !== 'browserstack')
-      stop();
+    stop();
     browser.end();
   },
   'Index file': (browser) => {
