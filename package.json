@@ -1,0 +1,58 @@
+{
+  "name": "webtrader-nightwatch",
+  "version": "1.0.0",
+  "description": "Integration testing of webtrader",
+  "main": "nightwatch.conf.js",
+  "engines": {
+    "node": ">=6.0",
+    "npm": ">=3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binary-com/webtrader-nightwatch.git"
+  },
+  "author": "Binary.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binary-com/webtrader-nightwatch/issues"
+  },
+  "homepage": "https://github.com/binary-com/webtrader-nightwatch#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "babel-core": "^6.10.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "lodash": "^4.17.4",
+    "nightwatch": "^0.9.15",
+    "nightwatch-html-reporter": "^2.0.2",
+    "node-sass": "^3.10.0",
+    "selenium-download": "^2.0.10",
+    "serve-static": "^1.12.2",
+    "showdown": "^1.6.3"
+  },
+  "scripts": {
+    "postinstall": "node nightwatch.conf.js",
+    "test": "nightwatch --config nightwatch.conf.js",
+    "test-and-generate-report": "yarn test && nightwatch-html-reporter -d ./reports -o index.html"
+  },
+  "contributors": [
+    {
+      "name": "Apoorv Joshi",
+      "email": "apoorv@binary.com"
+    },
+    {
+      "name": "Arnab Karmakar",
+      "email": "arnab@binary.com"
+    }
+  ],
+  "babel": {
+    "presets": [
+      "env", "es2015", "stage-0"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
+  }
+}
