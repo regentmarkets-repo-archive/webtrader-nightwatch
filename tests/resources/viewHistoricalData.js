@@ -1,9 +1,14 @@
 export default {
   viewHistoricalData: (browser) => {
     browser
+      .execute(() => $('.windows .closeAll').click())
+      .moveToElement('.resources', 0, 0)
+      .pause(1000)
       .click('.resources > a')
       .click('.resources > ul > li:nth-child(3)')
       .waitForElementPresent('.historical-data-dialog')
+      .moveToElement('div.historical-data-dialog', 0, 0)
+      .pause(1000)
       .click('.historical-data-dialog .instrumnet-dropdown')
       .click('.historical-data-dialog .instrumnet-dropdown > ul > li:last-of-type')
       .click('.historical-data-dialog .instrumnet-dropdown > ul > li:last-of-type > div')

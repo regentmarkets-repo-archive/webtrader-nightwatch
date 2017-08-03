@@ -1,16 +1,7 @@
-import assert from 'assert';
 import head from 'lodash/head';
 
 export default {
-  login: (browser) => {
-
-    let accountId = browser.globals.auth_url.split('&');
-    assert.notEqual(accountId, null, 'No account info found');
-    assert.notEqual(accountId, undefined, 'No account info found');
-    assert.notEqual(accountId.length, 0, 'Incorrect account info');
-    accountId = head(accountId).replace('acct1=', '');
-    assert.notEqual(accountId, null, 'No account info found');
-    assert.notEqual(accountId, undefined, 'No account info found');
+  login: (browser, username, password, done) => {
 
     browser
       .click('.login button')
@@ -19,21 +10,27 @@ export default {
       //Navigate to oauth.binary.com
       .assert.urlContains('oauth.binary.com')
       //Login
-      .url(`${browser.globals.url}/?${browser.globals.auth_url}`)
+      .setValue('#txtEmail', username)
+      .setValue('#txtPass', password)
+      .click('button[name=login]')
       .waitForElementVisible('body')
       .waitForElementNotVisible('.sk-spinner-container')
       //Check if logged in
       .waitForElementVisible('.main-account')
+      .pause(5000)
+      //If reality check dialog opens, then click continue
+      .execute(() => $('div.realitycheck button:contains("Continue Trading")').click())
       // Close all chart windows
       .waitForElementPresent('.top-nav-menu .instruments ul:first-of-type li:first-of-type')
       .click('.top-nav-menu .windows')
       //Check account credentials
       .click('.top-nav-menu .windows .closeAll')
-      .assert.containsText('.main-account .account-type', 'Virtual Account')
-      .assert.containsText('.account .main-account .account-id', accountId)
+      //.assert.containsText('.main-account .account-type', 'Virtual Account')
+      //.assert.containsText('.account .main-account .account-id', accountId)
       //Check login dropdown
       .click('.main-account')
       .assert.visible('#all-accounts-top');
+    done();
 
   }
 }

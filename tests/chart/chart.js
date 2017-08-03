@@ -1,6 +1,7 @@
 export default {
   chartFunctionTest: (browser) => {
     browser
+      .pause(1000)
       //Dialog reload
       .click('div[role="dialog"]:last-of-type img.reload')
       //Show time period dropdown

@@ -21,5 +21,7 @@ export default {
       .assert.visible('.token-dialog .confirm')
       .click('.token-dialog .confirm button:first-of-type')
       .waitForElementNotPresent('.token-dialog table tbody tr')
+      //close dialog
+      .execute(() => $('div.token-dialog').parent('div').find('.ui-dialog-titlebar button[title="Close"]').click());
   }
 }

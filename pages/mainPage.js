@@ -12,19 +12,6 @@ const openMainPage = {
       //Close all dialogs.
       .click('@closeAll');
   },
-  login: function () {
-    this.api.url(`${this.api.globals.url}/?${this.api.globals.auth_url}`);
-    return this
-      .waitForElementVisible('body')
-      .waitForElementNotVisible('@spinner')
-      .waitForElementVisible('@extensionPopup')
-      //Close chrome pop-up
-      .click('@cancel')
-      .waitForElementPresent('@instrument')
-      .click('@windows')
-      //Close all dialogs.
-      .click('@closeAll');
-  }
 }
 module.exports = {
   url: function () { return this.api.globals.url },

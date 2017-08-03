@@ -3,11 +3,6 @@ require('babel-core/register');
 const SCREENSHOT_PATH = "./reports/screenshots/";
 const BINPATH = './node_modules/nightwatch/bin/';
 
-/**
- * Set URL based on travis branch
- */
-const url = 'https://webtrader.binary.com/beta';
-
 // we use a nightwatch.conf.js file so we can include comments and helper functions
 module.exports = {
 
@@ -42,8 +37,9 @@ module.exports = {
       },
 
       "globals": {
-        "url": url,
-        "auth_url": process.env.AUTHENTICATION_URL,
+        "url": process.env.TEST_URL,
+        "username": process.env.USERNAME,
+        "password": process.env.PASSWORD,
         "waitForConditionTimeout": 10000, // sometimes internet is slow so wait.
         "waitForConditionPollInterval": 500
       },

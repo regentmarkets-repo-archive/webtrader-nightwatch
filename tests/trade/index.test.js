@@ -1,7 +1,7 @@
 /**
  * Tests for trade dialog
  */
-import { beforeLogin, after } from '../../others/default';
+import { before, beforeLogin, after } from '../../others/default';
 import * as UpDownTests from './upDownTrade';
 import * as TouchNoTouchTests from './touchNoTouchTrade';
 import * as InOutTests from './inOutTrade';
@@ -9,11 +9,15 @@ import * as DigitTests from './digitTrade';
 import * as AsianTests from './asianTrade';
 import * as tickerTest from './ticker';
 import { tradeTemplate } from './tradeTemplate';
+import {accountSwitch} from '../account/accountSwitch';
 
 export default {
   before: (browser) => {
+    before(browser);
     beforeLogin(browser);
+    accountSwitch(browser);
     browser
+      .execute(() => $('.windows .closeAll').click())
       // Open volatility 10 index dialog
       .click('.trade')
       .waitForElementVisible('.trade > ul > li:last-of-type')

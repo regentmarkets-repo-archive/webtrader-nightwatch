@@ -3,8 +3,10 @@ const buyContract = (browser, direction) => {
   browser
     // Check if the purchase button is enabled
     .waitForCSSProperty('.trade-dialog .trade-fields .purchase-row', 'opacity', '1')
+    .pause(5000)
     // Purchase contract
     .execute("$('.trade-dialog .trade-fields .purchase-row > li > button').click()")
+      //.pause()
     .waitForElementPresent('.trade-dialog .trade-conf')
     .waitForElementVisible('.trade-dialog .trade-conf .tick-chart')
     // Monitoring tick trade
