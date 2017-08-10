@@ -1,7 +1,7 @@
 export default {
   tradingTimes: (browser) => {
     browser
-      .execute(() => $('.windows .closeAll').click())
+      .execute(() => $('.workspace-manager [rv-on-click=closeAll]').click())
       .moveToElement('.resources', 0, 0)
       .pause(1000)
       .click('.resources')
@@ -20,6 +20,7 @@ export default {
       .click('div.tradingTimes .trading-times-sub-header > span:nth-of-type(3)')
       .click('div.tradingTimes .ui-selectmenu-open .ui-menu-item:nth-of-type(2)')
       .assert.containsText('.tradingTimes tbody > tr.odd > td:first-of-type', 'Bear Market Index')
-      .waitForElementNotVisible('.tradingTimes')
+      .click('div.tradingTimes .ui-dialog-titlebar-close')
+      .waitForElementNotVisible('div.tradingTimes')
   }
 }

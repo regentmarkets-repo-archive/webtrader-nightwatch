@@ -1,7 +1,7 @@
 export default {
   viewHistoricalData: (browser) => {
     browser
-      .execute(() => $('.windows .closeAll').click())
+      .execute(() => $('.workspace-manager [rv-on-click=closeAll]').click())
       .moveToElement('.resources', 0, 0)
       .pause(1000)
       .click('.resources > a')
