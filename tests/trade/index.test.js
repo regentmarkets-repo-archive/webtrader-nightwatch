@@ -17,13 +17,13 @@ export default {
     beforeLogin(browser);
     accountSwitch(browser);
     browser
-      .execute(() => $('.windows .closeAll').click())
+      .execute(() => $('.workspace-manager [rv-on-click=closeAll]').click())
       // Open volatility 10 index dialog
-      .click('.trade')
+      .moveToElement('.trade', 10, 10)
       .waitForElementVisible('.trade > ul > li:last-of-type')
-      .click('.trade > ul > li:last-of-type')
+      .moveToElement('.trade > ul > li:last-of-type', 10, 10)
       .waitForElementVisible('.trade > ul > li:last-of-type > ul > li:first-of-type')
-      .click('.trade > ul > li:last-of-type > ul > li:first-of-type')
+      .moveToElement('.trade > ul > li:last-of-type > ul > li:first-of-type', 10, 10)
       .waitForElementVisible('.trade > ul > li:last-of-type > ul > li:first-of-type > ul > li:first-of-type')
       .click('.trade > ul > li:last-of-type > ul > li:first-of-type > ul > li:first-of-type')
       .waitForElementPresent('.trade-dialog')

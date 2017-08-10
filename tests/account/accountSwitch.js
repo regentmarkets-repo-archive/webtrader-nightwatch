@@ -8,6 +8,6 @@ export default {
       //If reality check dialog opens, then click continue
       .execute(() => $('div.realitycheck button:contains("Continue Trading")').click())
       .assert.containsText('.account-menu > ul:first-of-type > li .main-account .account-type', 'Virtual Account')
-      .assert.containsText('.account-menu > ul:first-of-type > li .main-account .account-id', 'VRTC1418840');
+      .assert.containsText('.account-menu > ul:first-of-type > li .main-account .account-id', 'VRTC');
   }
 }
