@@ -8,7 +8,8 @@ const openMainPage = {
       //Close chrome pop-up
       .click('@cancel')
       .waitForElementPresent('@instrument')
-      .click('@windows')
+      // .click('@windows')
+      .waitForElementPresent('@closeAll')
       //Close all dialogs.
       .click('@closeAll');
   },
@@ -27,13 +28,13 @@ module.exports = {
       selector: '.top-nav-menu .instruments > ul > li:first-of-type'
     },
     windows: {
-      selector: '.top-nav-menu .windows'
+      selector: '.top-nav-menu .workspace'
     },
     cancel: {
       selector: '.chrome_extension #cancel'
     },
     closeAll: {
-      selector: '.top-nav-menu .windows .closeAll'
+      selector: '.top-nav-menu .workspace-manager [rv-on-click=closeAll]'
     }
   }
 }

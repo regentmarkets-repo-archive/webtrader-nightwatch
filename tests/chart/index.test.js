@@ -9,12 +9,12 @@ import { indicatorAndOverlay as indicatorAndOverlayTest } from './indicatorAndOv
 const _openChart = (browser) => {
   browser
   //Open Dialog
-      .execute(() => $('.windows .closeAll').click())
-      .click('.top-nav-menu .instruments')
-      .waitForElementVisible('.top-nav-menu .instruments > ul')
-      .click('.top-nav-menu .instruments > ul > li:last-of-type')
+      .execute(() => $('.workspace-manager [rv-on-click=closeAll]').click())
+      .moveToElement('.top-nav-menu .instruments', 10, 10)
+      .waitForElementVisible('.top-nav-menu .instruments > ul > li:last-of-type')
+      .moveToElement('.top-nav-menu .instruments > ul > li:last-of-type', 10, 10)
       .assert.visible('.top-nav-menu .instruments > ul > li:last-of-type')
-      .click('.top-nav-menu .instruments > ul > li:last-of-type > ul > li:first-of-type')
+      .moveToElement('.top-nav-menu .instruments > ul > li:last-of-type > ul > li:first-of-type', 10, 10)
       .assert.visible('.top-nav-menu .instruments > ul > li:last-of-type > ul > li:first-of-type')
       .click('.top-nav-menu .instruments > ul > li:last-of-type > ul > li:first-of-type > ul > li:first-of-type')
       .waitForElementVisible('div[role="dialog"]:last-of-type')
