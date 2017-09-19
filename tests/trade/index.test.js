@@ -17,7 +17,7 @@ export default {
     beforeLogin(browser);
     accountSwitch(browser);
     browser
-      .execute(() => $('.workspace-manager [rv-on-click=closeAll]').click())
+      .execute(() => $('.workspace [rv-on-click=closeAll]').click())
       // Open volatility 10 index dialog
       .moveToElement('.trade', 10, 10)
       .waitForElementVisible('.trade > ul > li:last-of-type')

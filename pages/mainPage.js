@@ -34,7 +34,7 @@ module.exports = {
       selector: '.chrome_extension #cancel'
     },
     closeAll: {
-      selector: '.top-nav-menu .workspace-manager [rv-on-click=closeAll]'
+      selector: '.top-nav-menu .workspace [rv-on-click=closeAll]'
     }
   }
 }

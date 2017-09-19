@@ -1,7 +1,7 @@
 export default {
   assetIndex: (browser) => {
     browser
-      .execute(() => $('.workspace-manager [rv-on-click=closeAll]').click())
+      .execute(() => $('.workspace [rv-on-click=closeAll]').click())
       .moveToElement('.resources', 0, 0)
       .pause(1000)
       .click('.resources')

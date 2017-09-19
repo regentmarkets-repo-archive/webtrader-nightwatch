@@ -9,7 +9,7 @@ import { indicatorAndOverlay as indicatorAndOverlayTest } from './indicatorAndOv
 const _openChart = (browser) => {
   browser
   //Open Dialog
-      .execute(() => $('.workspace-manager [rv-on-click=closeAll]').click())
+      .execute(() => $('.workspace [rv-on-click=closeAll]').click())
       .moveToElement('.top-nav-menu .instruments', 10, 10)
       .waitForElementVisible('.top-nav-menu .instruments > ul > li:last-of-type')
       .moveToElement('.top-nav-menu .instruments > ul > li:last-of-type', 10, 10)

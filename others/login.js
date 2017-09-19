@@ -22,7 +22,7 @@ export default {
       .execute(() => $('div.realitycheck button:contains("Continue Trading")').click())
       // Close all chart windows
       .waitForElementPresent('.top-nav-menu .instruments ul:first-of-type li:first-of-type')
-      .click('.workspace-manager [rv-on-click=closeAll]')
+      .click('.workspace [rv-on-click=closeAll]')
       //.assert.containsText('.main-account .account-type', 'Virtual Account')
       //.assert.containsText('.account .main-account .account-id', accountId)
       //Check login dropdown
