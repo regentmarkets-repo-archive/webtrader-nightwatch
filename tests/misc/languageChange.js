@@ -6,7 +6,7 @@ export default {
       .assert.cssClassPresent('#select_language > li:nth-of-type(2)', 'invisible')
       .click('#select_language > li:nth-of-type(3)')
       .waitForElementPresent('body')
-      .pause(1000)
+      .pause(5000)
       .assert.containsText('.trade', 'Handel');
   }
 }
