@@ -38,7 +38,7 @@ module.exports = {
 
       "globals": {
         "url": process.env.TEST_URL,
-        "username": process.env.USERNAME,
+        "username": process.env.USER_EMAIL,
         "password": process.env.PASSWORD,
         "waitForConditionTimeout": 10000, // sometimes internet is slow so wait.
         "waitForConditionPollInterval": 500

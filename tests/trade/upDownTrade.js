@@ -20,7 +20,7 @@ export default {
   rise: (browser) => {
     browser
       //Check that RISE is selected by default
-      .assert.cssProperty('.trade-dialog .trade-fields .contract-displays [data-name="rise"]', 'font-weight', 'bold')
+      .assert.cssProperty('.trade-dialog .trade-fields .contract-displays [data-name="rise"]', 'font-weight', '700')
       .waitForElementPresent('.trade-dialog .trade-fields .date-start-row')
       .assert.hidden('.trade-dialog .trade-fields .duration-row > li:last-of-type')
       .click('.trade-dialog .trade-fields .duration-row > li:first-of-type > span').pause(200)
