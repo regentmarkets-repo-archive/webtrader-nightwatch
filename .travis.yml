@@ -12,11 +12,6 @@ node_js:
 dist: trusty
 addons:
   chrome: stable
-notifications:
-  slack: binary-group:xEVrYY0QGz7fbwJqi4LMWbBS
-  email:
-  - arnab@binary.com
-  - apoorv@binary.com
 branches:
   only:
   - master
